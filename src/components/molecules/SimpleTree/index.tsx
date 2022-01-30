@@ -1,7 +1,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-import React, { useRef } from "react";
-import PageTitle from "../../molecules/PageTitle";
+import React, { useRef, FC } from "react";
+import PageTitle from "../PageTitle";
 import Controls from "../../utils/Controlles";
 
 const Thing = () => {
@@ -25,7 +25,7 @@ const Thing = () => {
     );
 };
 
-const SimpleTree: React.FC = React.memo(() => {
+const SimpleTree: FC = React.memo(() => {
     return (
         <>
             <PageTitle title='TEST' discription={'this is test'} />

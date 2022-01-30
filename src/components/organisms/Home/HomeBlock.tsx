@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import React from 'react';
+import React, { FC } from 'react';
 import { LinkCardProps } from '../../../types/Component';
 import LinkCard from '../../molecules/LinkCard';
 import PageTitle from '../../molecules/PageTitle';
@@ -17,7 +17,7 @@ const linkCardArray: Array<LinkCardProps> = [
 
 ]
 
-const HomeBlock: React.FC = () => {
+const HomeBlock: FC = () => {
     return (
         <>
             <PageTitle title='Home' discription={HomeDiscription} />

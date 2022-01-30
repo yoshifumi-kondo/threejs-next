@@ -1,11 +1,11 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { FC } from 'react';
 import { globalMargin } from '../../../../styles/global.css';
 import { PageTitleProps } from '../../../types/Component';
 
 // Indicates the page title
-const PageTitle: React.FC<PageTitleProps> = ({ title, discription }) => {
+const PageTitle: FC<PageTitleProps> = ({ title, discription }) => {
 
     return (
         <>

@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { FC } from 'react';
 import { CustomHeadProps } from '../../types/Component';
 
-export const CustomHead: React.FC<CustomHeadProps> = ({ title = "threejs_sample", iconLink = "/favicon.ico" }) => {
+export const CustomHead: FC<CustomHeadProps> = ({ title = "threejs_sample", iconLink = "/favicon.ico" }) => {
     return (
         <Head>
             <title>{title}</title>

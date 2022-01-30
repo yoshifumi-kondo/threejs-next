@@ -1,8 +1,8 @@
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { FC } from 'react';
 import { globalMargin } from '../../../styles/global.css';
 
-const DefaultPageLayout: React.FC = ({ children }) => {
+const DefaultPageLayout: FC = ({ children }) => {
     return (
         <>
             <Box margin={globalMargin}>

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import DefaultPageLayout from "../../components/templates/DefaultPageLayout";
 import { CustomHead } from "../../components/templates/CustomHead";
-import SimpleTree from "../../components/organisms/SimpleTree";
+import SimpleTree from "../../components/molecules/SimpleTree";
 
-const Test: React.FC = React.memo(() => {
+const Test: FC = React.memo(() => {
     return (
         <DefaultPageLayout>
             <CustomHead />
