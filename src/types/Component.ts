@@ -12,6 +12,6 @@ export interface PageTitleProps {
 export interface LinkCardProps {
     title: string,
     description: string,
-    path: string,
+    path?: string,
     imageSrc?: string
 }

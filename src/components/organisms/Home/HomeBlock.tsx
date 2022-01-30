@@ -1,5 +1,6 @@
 import { Grid } from '@mui/material';
 import React from 'react';
+import { LinkCardProps } from '../../../types/Component';
 import LinkCard from '../../molecules/LinkCard';
 import PageTitle from '../../molecules/PageTitle';
 
@@ -9,41 +10,26 @@ const HomeDiscription =
     you can choose any demo
     `
 
+const linkCardArray: Array<LinkCardProps> = [
+    { 'title': 'TEST', 'description': 'this is test for threejs', 'path': '/Demos/Test', 'imageSrc': 'title/test.jpg' },
+    { 'title': 'TEST', 'description': 'this is test for threejs', 'path': '/Demos/Text_001', 'imageSrc': 'title/text-title-001.png' },
+    { 'title': 'Coming soon', 'description': 'this demo will be available soon' }
+
+]
+
 const HomeBlock: React.FC = () => {
     return (
         <>
             <PageTitle title='Home' discription={HomeDiscription} />
             <Grid container spacing={2} justifyContent={'space-evenly'}>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
-                <Grid item>
-                    <LinkCard title={'COMING SOON'} description={'this demo will be created soon'} path={'tt'} />
-                </Grid>
+                {linkCardArray.map((linkCardProps) => {
+                    const { title, description, path, imageSrc } = linkCardProps
+                    return (
+                        <Grid item>
+                            <LinkCard title={title} description={description} path={path} imageSrc={imageSrc} />
+                        </Grid>
+                    )
+                })}
             </Grid>
 
         </>

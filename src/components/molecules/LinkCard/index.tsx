@@ -10,10 +10,10 @@ import { LinkCardProps } from '../../../types/Component';
 
 
 const LinkCard: React.FunctionComponent<LinkCardProps> = ({ title, description, path, imageSrc }) => {
-    const defaultImageSrc = '/coming-soon.jpg'
+    const defaultImageSrc = 'title/coming-soon.jpg'
     return (
         <>
-            <Link href={path}>
+            <Link href={path ? path : ""}>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                         <CardMedia
